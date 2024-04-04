@@ -26,6 +26,7 @@ gitHubForm.addEventListener('submit', (e) => {
             // update html with data from github
             if (data.message === "Not Found") {
                 let ul = document.getElementById('userRepoCommits');
+                ul.innerHTML = '';
 
                 // Create variable that will create li's to be added to ul
                 let li = document.createElement('li');
@@ -40,6 +41,7 @@ gitHubForm.addEventListener('submit', (e) => {
                 ul.appendChild(li);
             } else {
                 let ul = document.getElementById('userRepoCommits');
+                ul.innerHTML = '';
 
                 for (let i in data) {
                     // Create variable that will create li's to be added to ul
